@@ -12,12 +12,13 @@ const route = require("./src/routes/index.js");
 const imageRoute = require("./src/routes/imageRoutes.js");
 
 // Used for notification so don't remove
-// const admin = require("./src/firebase/index.js");
+ const admin = require("./src/firebase/index.js");
 
 //constans and connection varibles
 const app = express();
-const connectionString = MONGODB_URI;
+const connectionString = process.env.MONGODB_URI
 const port = process.env.PORT || 3000;
+console.log(connectionString,'string')
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
