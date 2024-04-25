@@ -15,9 +15,11 @@
 
 const admin = require("firebase-admin");
 
-const serviceAccount = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+// const serviceAccount = process.env.GOOGLE_APPLICATION_CREDENTIALS;
 // const serviceAccount =
-//   "src\\firebase\\apnaemitra-a0541-firebase-adminsdk-6uuk6-01f63e6d8e.json";
+//   "apnaemitra-a0541-firebase-adminsdk-6uuk6-01f63e6d8e.json";
+const serviceAccount = require("./apnaemitra-a0541-firebase-adminsdk-6uuk6-01f63e6d8e.json");
+console.log(serviceAccount, "sea");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   //   projectId: "apnaemitra-a0541",
