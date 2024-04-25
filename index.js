@@ -36,9 +36,9 @@ app.use(express.urlencoded({ limit: "50mb", extended: false }));
 dbConnection(connectionString);
 
 app.get("/", (req, res) => {
-  res.render("index", { pageTitle: "User Interface for us" });
+  res.render("index", { pageTitle: "User Interface For You" });
 });
-//asd
+
 app.use("/api", route);
 
 app.use("/image", imageRoute);
