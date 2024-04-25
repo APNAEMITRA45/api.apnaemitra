@@ -18,7 +18,6 @@ const admin = require("./src/firebase/index.js");
 const app = express();
 const connectionString = process.env.MONGODB_URI;
 const port = process.env.PORT || 3000;
-console.log(connectionString, "string");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
