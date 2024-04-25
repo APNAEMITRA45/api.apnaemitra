@@ -3,7 +3,7 @@ const { v4: uuidv4 } = require("uuid");
 const fs = require("fs");
 const path = require("path");
 
-const uploadPath = path.join(__dirname, "src/uploads");
+const uploadPath = path.join(__dirname, "../uploads");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
